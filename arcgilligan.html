@@ -2,14 +2,27 @@
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
-    <title>arcgilligan</title>
+    <title>ARCGILLIGAN</title>
     <style>
-        canvas.emscripten { border: 0; background-color: black; }
+        html,
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        canvas.emscripten {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background-color: black;
+        }
     </style>
 </head>
 <body>
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
-    <script type='text/javascript'>Module = { canvas: document.getElementById('canvas') };</script>
+    <script>
+        Module = { canvas: document.getElementById('canvas') };
+    </script>
     <script async type="text/javascript" src="arcgilligan.js"></script>
 </body>
 </html>
