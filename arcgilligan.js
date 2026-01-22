@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpheryirmg.js
+// include: /tmp/tmp6x0wirqs.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -166,6 +166,7 @@ Module['FS_createPath']("/home/runner/work", "arcgilligan", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan", "arcgilligan", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan", "static", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "font", true, true);
+Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "ico", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "mesh", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "shader", true, true);
 Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static/shader", "wgpu", true, true);
@@ -210,25 +211,25 @@ Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "tex
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1227733, "end": 1242849}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1242849, "end": 1365869}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1365869, "end": 1405833}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1405833, "end": 1417477}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1417477, "end": 1417756}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1417756, "end": 1419115}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1419115, "end": 1482222}], "remote_package_size": 1482222});
+    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.ico", "start": 1227733, "end": 1498131}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.png", "start": 1498131, "end": 1575270}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.rc", "start": 1575270, "end": 1575315}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1575315, "end": 1590431}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1590431, "end": 1713451}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1713451, "end": 1753415}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1753415, "end": 1765059}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1765059, "end": 1765338}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1765338, "end": 1766697}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1766697, "end": 1829804}], "remote_package_size": 1829804});
 
   })();
 
-// end include: /tmp/tmpheryirmg.js
-// include: /tmp/tmpbczwnefu.js
+// end include: /tmp/tmp6x0wirqs.js
+// include: /tmp/tmpudf4uadc.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpbczwnefu.js
-// include: /tmp/tmps6zsr7x5.js
+  // end include: /tmp/tmpudf4uadc.js
+// include: /tmp/tmpntd9p8zv.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmps6zsr7x5.js
+  // end include: /tmp/tmpntd9p8zv.js
 
 
 var arguments_ = [];
