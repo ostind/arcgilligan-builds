@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpdguxnysu.js
+// include: /tmp/tmpwvchezjy.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -215,21 +215,21 @@ Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "tex
 
   })();
 
-// end include: /tmp/tmpdguxnysu.js
-// include: /tmp/tmpmhqfbd4f.js
+// end include: /tmp/tmpwvchezjy.js
+// include: /tmp/tmpbgk83sin.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpmhqfbd4f.js
-// include: /tmp/tmpfe3niqiu.js
+  // end include: /tmp/tmpbgk83sin.js
+// include: /tmp/tmpo43igsb6.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpfe3niqiu.js
+  // end include: /tmp/tmpo43igsb6.js
 
 
 var arguments_ = [];
@@ -267,7 +267,7 @@ if (ENVIRONMENT_IS_NODE) {
 
   // These modules will usually be used on Node.js. Load them eagerly to avoid
   // the complexity of lazy-loading.
-  var fs = require('fs');
+  var fs = require('node:fs');
 
   scriptDirectory = __dirname + '/';
 
@@ -837,7 +837,7 @@ async function instantiateAsync(binary, binaryFile, imports) {
 
 function getWasmImports() {
   // instrumenting imports is used in asyncify in two ways: to add assertions
-  // that check for proper import use, and for ASYNCIFY=2 we use them to set up
+  // that check for proper import use, and for JSPI we use them to set up
   // the Promise API on the import side.
   Asyncify.instrumentWasmImports(wasmImports);
   // prepare imports
@@ -1032,9 +1032,9 @@ async function createWasm() {
 
   
     /**
-     * @param {number} ptr
-     * @param {string} type
-     */
+   * @param {number} ptr
+   * @param {string} type
+   */
   function getValue(ptr, type = 'i8') {
     if (type.endsWith('*')) type = '*';
     switch (type) {
@@ -1062,10 +1062,10 @@ async function createWasm() {
 
   
     /**
-     * @param {number} ptr
-     * @param {number} value
-     * @param {string} type
-     */
+   * @param {number} ptr
+   * @param {number} value
+   * @param {string} type
+   */
   function setValue(ptr, value, type = 'i8') {
     if (type.endsWith('*')) type = '*';
     switch (type) {
@@ -1111,15 +1111,15 @@ async function createWasm() {
   
   
     /**
-     * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
-     * array that contains uint8 values, returns a copy of that string as a
-     * Javascript String object.
-     * heapOrArray is either a regular array, or a JavaScript typed array view.
-     * @param {number=} idx
-     * @param {number=} maxBytesToRead
-     * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
-     * @return {string}
-     */
+   * Given a pointer 'idx' to a null-terminated UTF8-encoded string in the given
+   * array that contains uint8 values, returns a copy of that string as a
+   * Javascript String object.
+   * heapOrArray is either a regular array, or a JavaScript typed array view.
+   * @param {number=} idx
+   * @param {number=} maxBytesToRead
+   * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
+   * @return {string}
+   */
   var UTF8ArrayToString = (heapOrArray, idx = 0, maxBytesToRead, ignoreNul) => {
   
       var endPtr = findStringEnd(heapOrArray, idx, maxBytesToRead, ignoreNul);
@@ -1157,18 +1157,18 @@ async function createWasm() {
     };
   
     /**
-     * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
-     * emscripten HEAP, returns a copy of that string as a Javascript String object.
-     *
-     * @param {number} ptr
-     * @param {number=} maxBytesToRead - An optional length that specifies the
-     *   maximum number of bytes to read. You can omit this parameter to scan the
-     *   string until the first 0 byte. If maxBytesToRead is passed, and the string
-     *   at [ptr, ptr+maxBytesToReadr[ contains a null byte in the middle, then the
-     *   string will cut short at that byte index.
-     * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
-     * @return {string}
-     */
+   * Given a pointer 'ptr' to a null-terminated UTF8-encoded string in the
+   * emscripten HEAP, returns a copy of that string as a Javascript String object.
+   *
+   * @param {number} ptr
+   * @param {number=} maxBytesToRead - An optional length that specifies the
+   *   maximum number of bytes to read. You can omit this parameter to scan the
+   *   string until the first 0 byte. If maxBytesToRead is passed, and the string
+   *   at [ptr, ptr+maxBytesToReadr[ contains a null byte in the middle, then the
+   *   string will cut short at that byte index.
+   * @param {boolean=} ignoreNul - If true, the function will not stop on a NUL character.
+   * @return {string}
+   */
   var UTF8ToString = (ptr, maxBytesToRead, ignoreNul) => {
       assert(typeof ptr == 'number', `UTF8ToString expects a number (got ${typeof ptr})`);
       return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead, ignoreNul) : '';
@@ -1302,148 +1302,148 @@ async function createWasm() {
         return root + dir;
       },
   basename:(path) => path && path.match(/([^\/]+|\/)\/*$/)[1],
-  join:(...paths) => PATH.normalize(paths.join('/')),
-  join2:(l, r) => PATH.normalize(l + '/' + r),
+join:(...paths) => PATH.normalize(paths.join('/')),
+join2:(l, r) => PATH.normalize(l + '/' + r),
+};
+
+var initRandomFill = () => {
+    // This block is not needed on v19+ since crypto.getRandomValues is builtin
+    if (ENVIRONMENT_IS_NODE) {
+      var nodeCrypto = require('node:crypto');
+      return (view) => nodeCrypto.randomFillSync(view);
+    }
+
+    return (view) => crypto.getRandomValues(view);
   };
-  
-  var initRandomFill = () => {
-      // This block is not needed on v19+ since crypto.getRandomValues is builtin
-      if (ENVIRONMENT_IS_NODE) {
-        var nodeCrypto = require('crypto');
-        return (view) => nodeCrypto.randomFillSync(view);
-      }
-  
-      return (view) => crypto.getRandomValues(view);
-    };
-  var randomFill = (view) => {
-      // Lazily init on the first invocation.
-      (randomFill = initRandomFill())(view);
-    };
-  
-  
-  
-  var PATH_FS = {
-  resolve:(...args) => {
-        var resolvedPath = '',
-          resolvedAbsolute = false;
-        for (var i = args.length - 1; i >= -1 && !resolvedAbsolute; i--) {
-          var path = (i >= 0) ? args[i] : FS.cwd();
-          // Skip empty and invalid entries
-          if (typeof path != 'string') {
-            throw new TypeError('Arguments to path.resolve must be strings');
-          } else if (!path) {
-            return ''; // an invalid portion invalidates the whole thing
-          }
-          resolvedPath = path + '/' + resolvedPath;
-          resolvedAbsolute = PATH.isAbs(path);
-        }
-        // At this point the path should be resolved to a full absolute path, but
-        // handle relative paths to be safe (might happen when process.cwd() fails)
-        resolvedPath = PATH.normalizeArray(resolvedPath.split('/').filter((p) => !!p), !resolvedAbsolute).join('/');
-        return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
-      },
-  relative:(from, to) => {
-        from = PATH_FS.resolve(from).slice(1);
-        to = PATH_FS.resolve(to).slice(1);
-        function trim(arr) {
-          var start = 0;
-          for (; start < arr.length; start++) {
-            if (arr[start] !== '') break;
-          }
-          var end = arr.length - 1;
-          for (; end >= 0; end--) {
-            if (arr[end] !== '') break;
-          }
-          if (start > end) return [];
-          return arr.slice(start, end - start + 1);
-        }
-        var fromParts = trim(from.split('/'));
-        var toParts = trim(to.split('/'));
-        var length = Math.min(fromParts.length, toParts.length);
-        var samePartsLength = length;
-        for (var i = 0; i < length; i++) {
-          if (fromParts[i] !== toParts[i]) {
-            samePartsLength = i;
-            break;
-          }
-        }
-        var outputParts = [];
-        for (var i = samePartsLength; i < fromParts.length; i++) {
-          outputParts.push('..');
-        }
-        outputParts = outputParts.concat(toParts.slice(samePartsLength));
-        return outputParts.join('/');
-      },
+var randomFill = (view) => {
+    // Lazily init on the first invocation.
+    (randomFill = initRandomFill())(view);
   };
-  
-  
-  
-  var FS_stdin_getChar_buffer = [];
-  
-  var lengthBytesUTF8 = (str) => {
-      var len = 0;
-      for (var i = 0; i < str.length; ++i) {
-        // Gotcha: charCodeAt returns a 16-bit word that is a UTF-16 encoded code
-        // unit, not a Unicode code point of the character! So decode
-        // UTF16->UTF32->UTF8.
-        // See http://unicode.org/faq/utf_bom.html#utf16-3
-        var c = str.charCodeAt(i); // possibly a lead surrogate
-        if (c <= 0x7F) {
-          len++;
-        } else if (c <= 0x7FF) {
-          len += 2;
-        } else if (c >= 0xD800 && c <= 0xDFFF) {
-          len += 4; ++i;
-        } else {
-          len += 3;
+
+
+
+var PATH_FS = {
+resolve:(...args) => {
+      var resolvedPath = '',
+        resolvedAbsolute = false;
+      for (var i = args.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+        var path = (i >= 0) ? args[i] : FS.cwd();
+        // Skip empty and invalid entries
+        if (typeof path != 'string') {
+          throw new TypeError('Arguments to path.resolve must be strings');
+        } else if (!path) {
+          return ''; // an invalid portion invalidates the whole thing
+        }
+        resolvedPath = path + '/' + resolvedPath;
+        resolvedAbsolute = PATH.isAbs(path);
+      }
+      // At this point the path should be resolved to a full absolute path, but
+      // handle relative paths to be safe (might happen when process.cwd() fails)
+      resolvedPath = PATH.normalizeArray(resolvedPath.split('/').filter((p) => !!p), !resolvedAbsolute).join('/');
+      return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+    },
+relative:(from, to) => {
+      from = PATH_FS.resolve(from).slice(1);
+      to = PATH_FS.resolve(to).slice(1);
+      function trim(arr) {
+        var start = 0;
+        for (; start < arr.length; start++) {
+          if (arr[start] !== '') break;
+        }
+        var end = arr.length - 1;
+        for (; end >= 0; end--) {
+          if (arr[end] !== '') break;
+        }
+        if (start > end) return [];
+        return arr.slice(start, end - start + 1);
+      }
+      var fromParts = trim(from.split('/'));
+      var toParts = trim(to.split('/'));
+      var length = Math.min(fromParts.length, toParts.length);
+      var samePartsLength = length;
+      for (var i = 0; i < length; i++) {
+        if (fromParts[i] !== toParts[i]) {
+          samePartsLength = i;
+          break;
         }
       }
-      return len;
-    };
-  
-  var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
-      assert(typeof str === 'string', `stringToUTF8Array expects a string (got ${typeof str})`);
-      // Parameter maxBytesToWrite is not optional. Negative values, 0, null,
-      // undefined and false each don't write out any bytes.
-      if (!(maxBytesToWrite > 0))
-        return 0;
-  
-      var startIdx = outIdx;
-      var endIdx = outIdx + maxBytesToWrite - 1; // -1 for string null terminator.
-      for (var i = 0; i < str.length; ++i) {
-        // For UTF8 byte structure, see http://en.wikipedia.org/wiki/UTF-8#Description
-        // and https://www.ietf.org/rfc/rfc2279.txt
-        // and https://tools.ietf.org/html/rfc3629
-        var u = str.codePointAt(i);
-        if (u <= 0x7F) {
-          if (outIdx >= endIdx) break;
-          heap[outIdx++] = u;
-        } else if (u <= 0x7FF) {
-          if (outIdx + 1 >= endIdx) break;
-          heap[outIdx++] = 0xC0 | (u >> 6);
-          heap[outIdx++] = 0x80 | (u & 63);
-        } else if (u <= 0xFFFF) {
-          if (outIdx + 2 >= endIdx) break;
-          heap[outIdx++] = 0xE0 | (u >> 12);
-          heap[outIdx++] = 0x80 | ((u >> 6) & 63);
-          heap[outIdx++] = 0x80 | (u & 63);
-        } else {
-          if (outIdx + 3 >= endIdx) break;
-          if (u > 0x10FFFF) warnOnce('Invalid Unicode code point ' + ptrToString(u) + ' encountered when serializing a JS string to a UTF-8 string in wasm memory! (Valid unicode code points should be in range 0-0x10FFFF).');
-          heap[outIdx++] = 0xF0 | (u >> 18);
-          heap[outIdx++] = 0x80 | ((u >> 12) & 63);
-          heap[outIdx++] = 0x80 | ((u >> 6) & 63);
-          heap[outIdx++] = 0x80 | (u & 63);
-          // Gotcha: if codePoint is over 0xFFFF, it is represented as a surrogate pair in UTF-16.
-          // We need to manually skip over the second code unit for correct iteration.
-          i++;
-        }
+      var outputParts = [];
+      for (var i = samePartsLength; i < fromParts.length; i++) {
+        outputParts.push('..');
       }
-      // Null-terminate the pointer to the buffer.
-      heap[outIdx] = 0;
-      return outIdx - startIdx;
-    };
-  /** @type {function(string, boolean=, number=)} */
+      outputParts = outputParts.concat(toParts.slice(samePartsLength));
+      return outputParts.join('/');
+    },
+};
+
+
+
+var FS_stdin_getChar_buffer = [];
+
+var lengthBytesUTF8 = (str) => {
+    var len = 0;
+    for (var i = 0; i < str.length; ++i) {
+      // Gotcha: charCodeAt returns a 16-bit word that is a UTF-16 encoded code
+      // unit, not a Unicode code point of the character! So decode
+      // UTF16->UTF32->UTF8.
+      // See http://unicode.org/faq/utf_bom.html#utf16-3
+      var c = str.charCodeAt(i); // possibly a lead surrogate
+      if (c <= 0x7F) {
+        len++;
+      } else if (c <= 0x7FF) {
+        len += 2;
+      } else if (c >= 0xD800 && c <= 0xDFFF) {
+        len += 4; ++i;
+      } else {
+        len += 3;
+      }
+    }
+    return len;
+  };
+
+var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
+    assert(typeof str === 'string', `stringToUTF8Array expects a string (got ${typeof str})`);
+    // Parameter maxBytesToWrite is not optional. Negative values, 0, null,
+    // undefined and false each don't write out any bytes.
+    if (!(maxBytesToWrite > 0))
+      return 0;
+
+    var startIdx = outIdx;
+    var endIdx = outIdx + maxBytesToWrite - 1; // -1 for string null terminator.
+    for (var i = 0; i < str.length; ++i) {
+      // For UTF8 byte structure, see http://en.wikipedia.org/wiki/UTF-8#Description
+      // and https://www.ietf.org/rfc/rfc2279.txt
+      // and https://tools.ietf.org/html/rfc3629
+      var u = str.codePointAt(i);
+      if (u <= 0x7F) {
+        if (outIdx >= endIdx) break;
+        heap[outIdx++] = u;
+      } else if (u <= 0x7FF) {
+        if (outIdx + 1 >= endIdx) break;
+        heap[outIdx++] = 0xC0 | (u >> 6);
+        heap[outIdx++] = 0x80 | (u & 63);
+      } else if (u <= 0xFFFF) {
+        if (outIdx + 2 >= endIdx) break;
+        heap[outIdx++] = 0xE0 | (u >> 12);
+        heap[outIdx++] = 0x80 | ((u >> 6) & 63);
+        heap[outIdx++] = 0x80 | (u & 63);
+      } else {
+        if (outIdx + 3 >= endIdx) break;
+        if (u > 0x10FFFF) warnOnce('Invalid Unicode code point ' + ptrToString(u) + ' encountered when serializing a JS string to a UTF-8 string in wasm memory! (Valid unicode code points should be in range 0-0x10FFFF).');
+        heap[outIdx++] = 0xF0 | (u >> 18);
+        heap[outIdx++] = 0x80 | ((u >> 12) & 63);
+        heap[outIdx++] = 0x80 | ((u >> 6) & 63);
+        heap[outIdx++] = 0x80 | (u & 63);
+        // Gotcha: if codePoint is over 0xFFFF, it is represented as a surrogate pair in UTF-16.
+        // We need to manually skip over the second code unit for correct iteration.
+        i++;
+      }
+    }
+    // Null-terminate the pointer to the buffer.
+    heap[outIdx] = 0;
+    return outIdx - startIdx;
+  };
+/** @type {function(string, boolean=, number=)} */
   var intArrayFromString = (stringy, dontAddNull, length) => {
       var len = length > 0 ? length : lengthBytesUTF8(stringy)+1;
       var u8array = new Array(len);
@@ -4699,10 +4699,11 @@ async function createWasm() {
         return;
       }
       try {
-        func();
-        maybeExit();
+        return func();
       } catch (e) {
         handleException(e);
+      } finally {
+        maybeExit();
       }
     };
   
@@ -4854,9 +4855,9 @@ async function createWasm() {
   
   
     /**
-     * @param {number=} arg
-     * @param {boolean=} noSetTiming
-     */
+   * @param {number=} arg
+   * @param {boolean=} noSetTiming
+   */
   var setMainLoop = (iterFunc, fps, simulateInfiniteLoop, arg, noSetTiming) => {
       assert(!MainLoop.func, 'emscripten_set_main_loop: there can only be one main loop function at once: call emscripten_cancel_main_loop to cancel the previous one before setting a new one with different parameters.');
       MainLoop.func = iterFunc;
@@ -5062,15 +5063,11 @@ async function createWasm() {
       }
     };
 
-  /** @param {number=} timeout */
-  var safeSetTimeout = (func, timeout) => {
-      
-      return setTimeout(() => {
-        
-        callUserCallback(func);
-      }, timeout);
-    };
-  var _emscripten_sleep = (ms) => Asyncify.handleSleep((wakeUp) => safeSetTimeout(wakeUp, ms));
+  var _emscripten_sleep = function(ms) {
+    let innerFunc =  () => new Promise((resolve) => setTimeout(resolve, ms));
+    return Asyncify.handleAsync(innerFunc);
+  }
+  ;
   _emscripten_sleep.isAsync = true;
 
   
@@ -6593,6 +6590,14 @@ async function createWasm() {
   
   
   
+  /** @param {number=} timeout */
+  var safeSetTimeout = (func, timeout) => {
+      
+      return setTimeout(() => {
+        
+        callUserCallback(func);
+      }, timeout);
+    };
   
   
   
@@ -7720,29 +7725,34 @@ async function createWasm() {
   
         event.preventDefault();
   
+        var drop_dir = '.glfw_dropped_files';
         var filenames = _malloc(event.dataTransfer.files.length * 4);
         var filenamesArray = [];
-        var count = event.dataTransfer.files.length;
+        for (var i = 0; i < event.dataTransfer.files.length; ++i) {
+          var path = `/${drop_dir}/${event.dataTransfer.files[i].name.replace(/\//g, "_")}`;
+          var filename = stringToNewUTF8(path);
+          filenamesArray.push(filename);
+          HEAPU32[(((filenames)+(i*4))>>2)] = filename;
+        }
   
         // Read and save the files to emscripten's FS
         var written = 0;
-        var drop_dir = '.glfw_dropped_files';
         FS.createPath('/', drop_dir);
   
-        function save(file) {
-          var path = '/' + drop_dir + '/' + file.name.replace(/\//g, '_');
+        function save(file, in_path, numfiles) {
+          var path = '/' + drop_dir + in_path + '/' + file.name.replace(/\//g, '_');
           var reader = new FileReader();
           reader.onloadend = (e) => {
             if (reader.readyState != 2) { // not DONE
               ++written;
-              out('failed to read dropped file: '+file.name+': '+reader.error);
+              err(`failed to read dropped file: ${in_path}/${file.name}: ${reader.error}`);
               return;
             }
   
             var data = e.target.result;
             FS.writeFile(path, new Uint8Array(data));
-            if (++written === count) {
-              ((a1, a2, a3) => dynCall_viii(GLFW.active.dropFunc, a1, a2, a3))(GLFW.active.id, count, filenames);
+            if (++written === numfiles) {
+              ((a1, a2, a3) => dynCall_viii(GLFW.active.dropFunc, a1, a2, a3))(GLFW.active.id, filenamesArray.length, filenames);
   
               for (var i = 0; i < filenamesArray.length; ++i) {
                 _free(filenamesArray[i]);
@@ -7751,14 +7761,61 @@ async function createWasm() {
             }
           };
           reader.readAsArrayBuffer(file);
-  
-          var filename = stringToNewUTF8(path);
-          filenamesArray.push(filename);
-          HEAPU32[(((filenames)+(i*4))>>2)] = filename;
         }
   
-        for (var i = 0; i < count; ++i) {
-          save(event.dataTransfer.files[i]);
+        let filesQ = [];
+        function finalize() {
+          var count = filesQ.length;
+          for (var i = 0; i < count; ++i) {
+            save(filesQ[i].file, filesQ[i].path, count);
+          }
+        } 
+  
+        if (DataTransferItem.prototype.webkitGetAsEntry) {
+          let entriesTree = {};
+          function markDone(fullpath, recursive) {
+            if (entriesTree[fullpath].subpaths.length != 0) return;
+            delete entriesTree[fullpath];
+            let parentpath = fullpath.substring(0, fullpath.lastIndexOf('/'));
+            if (!entriesTree.hasOwnProperty(parentpath)) {
+              if (Object.keys(entriesTree).length == 0) finalize();
+              return;
+            }
+            const fpIndex = entriesTree[parentpath].subpaths.indexOf(fullpath);
+            if (fpIndex > -1) entriesTree[parentpath].subpaths.splice(fpIndex, 1);
+            if (recursive) markDone(parentpath, true);
+            if (Object.keys(entriesTree).length == 0) finalize();
+          }
+          function processEntry(entry) {
+            let fp = entry.fullPath;
+            let pp = fp.substring(0, fp.lastIndexOf('/'));
+            entriesTree[fp] = { subpaths: [] };
+            if (entry.isFile) {
+              entry.file((f) => { filesQ.push({ file: f, path: pp }); markDone(fp, false); })
+            } else if (entry.isDirectory) {
+              if (entriesTree.hasOwnProperty(pp)) entriesTree[pp].subpaths.push(fp);
+              FS.createPath("/" + drop_dir + pp, entry.name);
+              var reader = entry.createReader();
+              var rRead = function (dirEntries) {
+                if (dirEntries.length == 0) {
+                  markDone(fp, true);
+                  return;
+                }
+                for (const ent of dirEntries) processEntry(ent);
+                reader.readEntries(rRead);
+              };
+              reader.readEntries(rRead);
+            }
+          }
+          for (const item of event.dataTransfer.items) {
+            processEntry(item.webkitGetAsEntry());
+          }
+        } else {
+          // fallback for browsers that does not support webkitGetAsEntry
+          for (const file of event.dataTransfer.files) {
+            filesQ.push({ file: file, path: "" });
+          }
+          finalize();
         }
   
         return false;
@@ -9381,7 +9438,7 @@ async function createWasm() {
         // Once we have rewound and the stack we no longer need to artificially
         // keep the runtime alive.
         
-        return func();
+        return callUserCallback(func);
       },
   handleSleep(startAsync) {
         assert(Asyncify.state !== Asyncify.State.Disabled, 'Asyncify cannot be done during or after the runtime exits');
@@ -9394,7 +9451,8 @@ async function createWasm() {
           var reachedCallback = false;
           var reachedAfterCallback = false;
           startAsync((handleSleepReturnValue = 0) => {
-            assert(!handleSleepReturnValue || typeof handleSleepReturnValue == 'number' || typeof handleSleepReturnValue == 'boolean'); // old emterpretify API supported other stuff
+            // old emterpretify API supported other stuff
+            assert(['undefined', 'number', 'boolean', 'bigint'].includes(typeof handleSleepReturnValue), `invalid type for handleSleepReturnValue: '${typeof handleSleepReturnValue}'`);
             if (ABORT) return;
             Asyncify.handleSleepReturnValue = handleSleepReturnValue;
             reachedCallback = true;
@@ -9473,9 +9531,9 @@ async function createWasm() {
         }
         return Asyncify.handleSleepReturnValue;
       },
-  handleAsync:(startAsync) => Asyncify.handleSleep((wakeUp) => {
+  handleAsync:(startAsync) => Asyncify.handleSleep(async (wakeUp) => {
         // TODO: add error handling as a second param when handleSleep implements it.
-        startAsync().then(wakeUp);
+        wakeUp(await startAsync());
       }),
   };
 
@@ -9498,11 +9556,11 @@ async function createWasm() {
   
   
     /**
-     * @param {string|null=} returnType
-     * @param {Array=} argTypes
-     * @param {Array=} args
-     * @param {Object=} opts
-     */
+   * @param {string|null=} returnType
+   * @param {Array=} argTypes
+   * @param {Array=} args
+   * @param {Object=} opts
+   */
   var ccall = (ident, returnType, argTypes, args, opts) => {
       // For fast lookup of conversion functions
       var toC = {
