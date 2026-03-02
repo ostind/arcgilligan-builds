@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpwvchezjy.js
+// include: /tmp/tmpi31jloy1.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -211,25 +211,25 @@ Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "tex
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.ico", "start": 1227733, "end": 1498131}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.png", "start": 1498131, "end": 1575270}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.rc", "start": 1575270, "end": 1575315}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1575315, "end": 1590431}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1590431, "end": 1713451}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1713451, "end": 1753415}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1753415, "end": 1765059}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1765059, "end": 1765338}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1765338, "end": 1766697}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1766697, "end": 1829804}], "remote_package_size": 1829804});
+    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.ico", "start": 1227733, "end": 1498131}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.png", "start": 1498131, "end": 1575270}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.rc", "start": 1575270, "end": 1575315}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1575315, "end": 1590431}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1590431, "end": 1713451}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1713451, "end": 1753415}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1753415, "end": 1765059}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1765059, "end": 1765338}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/grid.wgsl", "start": 1765338, "end": 1766670}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1766670, "end": 1768029}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/building.png", "start": 1768029, "end": 1822107}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1822107, "end": 1885214}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/site.jpg", "start": 1885214, "end": 1965307}], "remote_package_size": 1965307});
 
   })();
 
-// end include: /tmp/tmpwvchezjy.js
-// include: /tmp/tmpbgk83sin.js
+// end include: /tmp/tmpi31jloy1.js
+// include: /tmp/tmpme38uddn.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpbgk83sin.js
-// include: /tmp/tmpo43igsb6.js
+  // end include: /tmp/tmpme38uddn.js
+// include: /tmp/tmpxzusez7j.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpo43igsb6.js
+  // end include: /tmp/tmpxzusez7j.js
 
 
 var arguments_ = [];
@@ -721,7 +721,7 @@ function abort(what) {
 
   ABORT = true;
 
-  if (what.indexOf('RuntimeError: unreachable') >= 0) {
+  if (what.search(/RuntimeError: [Uu]nreachable/) >= 0) {
     what += '. "unreachable" may be due to ASYNCIFY_STACK_SIZE not being large enough (try increasing it)';
   }
 
@@ -2188,8 +2188,6 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
   ignorePermissions:true,
   filesystems:null,
   syncFSRequests:0,
-  readFiles:{
-  },
   ErrnoError:class extends Error {
         name = 'ErrnoError';
         // We set the `name` property to be able to identify `FS.ErrnoError`
@@ -2463,9 +2461,11 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         // return 0 if any user, group or owner bits are set.
         if (perms.includes('r') && !(node.mode & 292)) {
           return 2;
-        } else if (perms.includes('w') && !(node.mode & 146)) {
+        }
+        if (perms.includes('w') && !(node.mode & 146)) {
           return 2;
-        } else if (perms.includes('x') && !(node.mode & 73)) {
+        }
+        if (perms.includes('x') && !(node.mode & 73)) {
           return 2;
         }
         return 0;
@@ -2506,10 +2506,8 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
           if (FS.isRoot(node) || FS.getPath(node) === FS.cwd()) {
             return 10;
           }
-        } else {
-          if (FS.isDir(node.mode)) {
-            return 31;
-          }
+        } else if (FS.isDir(node.mode)) {
+          return 31;
         }
         return 0;
       },
@@ -2519,13 +2517,16 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         }
         if (FS.isLink(node.mode)) {
           return 32;
-        } else if (FS.isDir(node.mode)) {
-          if (FS.flagsToPermissionString(flags) !== 'r' // opening for write
-              || (flags & (512 | 64))) { // TODO: check for O_SEARCH? (== search for dir only)
+        }
+        var mode = FS.flagsToPermissionString(flags);
+        if (FS.isDir(node.mode)) {
+          // opening for write
+          // TODO: check for O_SEARCH? (== search for dir only)
+          if (mode !== 'r' || (flags & (512 | 64))) {
             return 31;
           }
         }
-        return FS.nodePermissions(node, FS.flagsToPermissionString(flags));
+        return FS.nodePermissions(node, mode);
       },
   checkOpExists(op, err) {
         if (!op) {
@@ -3187,11 +3188,6 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         }
         if (created) {
           FS.chmod(node, mode & 0o777);
-        }
-        if (Module['logReadFiles'] && !(flags & 1)) {
-          if (!(path in FS.readFiles)) {
-            FS.readFiles[path] = 1;
-          }
         }
         return stream;
       },
@@ -4725,13 +4721,12 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
           var timeUntilNextTick = Math.max(0, MainLoop.tickStartTime + value - _emscripten_get_now())|0;
           setTimeout(MainLoop.runner, timeUntilNextTick); // doing this each time means that on exception, we stop
         };
-        MainLoop.method = 'timeout';
       } else if (mode == 1) {
         MainLoop.scheduler = function MainLoop_scheduler_rAF() {
           MainLoop.requestAnimationFrame(MainLoop.runner);
         };
-        MainLoop.method = 'rAF';
-      } else if (mode == 2) {
+      } else {
+        assert(mode == 2);
         if (!MainLoop.setImmediate) {
           if (globalThis.setImmediate) {
             MainLoop.setImmediate = setImmediate;
@@ -4762,14 +4757,12 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         MainLoop.scheduler = function MainLoop_scheduler_setImmediate() {
           MainLoop.setImmediate(MainLoop.runner);
         };
-        MainLoop.method = 'immediate';
       }
       return 0;
     };
   var MainLoop = {
   running:false,
   scheduler:null,
-  method:"",
   currentlyRunningMainloop:0,
   func:null,
   arg:0,
@@ -4916,11 +4909,9 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
           return;
         } else if (MainLoop.timingMode == 0) {
           MainLoop.tickStartTime = _emscripten_get_now();
-        }
-  
-        if (MainLoop.method === 'timeout' && Module['ctx']) {
-          warnOnce('Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!');
-          MainLoop.method = ''; // just warn once per call to set main loop
+          if (Module['ctx']) {
+            warnOnce('Looks like you are rendering without using requestAnimationFrame for the main loop. You should use 0 for the frame rate in emscripten_set_main_loop in order to use requestAnimationFrame, as that can greatly improve your frame rates!');
+          }
         }
   
         MainLoop.runIter(iterFunc);
@@ -6625,10 +6616,10 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         // might create some side data structure for use later (like an Image element, etc.).
   
         var imagePlugin = {};
-        imagePlugin['canHandle'] = function imagePlugin_canHandle(name) {
+        imagePlugin['canHandle'] = (name) => {
           return !Module['noImageDecoding'] && /\.(jpg|jpeg|png|bmp|webp)$/i.test(name);
         };
-        imagePlugin['handle'] = async function imagePlugin_handle(byteArray, name) {
+        imagePlugin['handle'] = async (byteArray, name) => {
           var b = new Blob([byteArray], { type: Browser.getMimetype(name) });
           if (b.size !== byteArray.length) { // Safari bug #118630
             // Safari's Blob can only take an ArrayBuffer
@@ -6658,10 +6649,10 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
         preloadPlugins.push(imagePlugin);
   
         var audioPlugin = {};
-        audioPlugin['canHandle'] = function audioPlugin_canHandle(name) {
+        audioPlugin['canHandle'] = (name) => {
           return !Module['noAudioDecoding'] && name.slice(-4) in { '.ogg': 1, '.wav': 1, '.mp3': 1 };
         };
-        audioPlugin['handle'] = async function audioPlugin_handle(byteArray, name) {
+        audioPlugin['handle'] = async (byteArray, name) => {
           return new Promise((resolve, reject) => {
             var done = false;
             function finish(audio) {
@@ -6674,7 +6665,7 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
             var url = URL.createObjectURL(b); // XXX we never revoke this!
             var audio = new Audio();
             audio.addEventListener('canplaythrough', () => finish(audio), false); // use addEventListener due to chromium bug 124926
-            audio.onerror = function audio_onerror(event) {
+            audio.onerror = (event) => {
               if (done) return;
               err(`warning: browser could not fully decode audio ${name}, trying slower base64 approach`);
               function encode64(data) {
@@ -9342,8 +9333,7 @@ var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
           if (typeof original == 'function') {
             var wrapper = Asyncify.instrumentFunction(original);
             ret[x] = wrapper;
-  
-         } else {
+          } else {
             ret[x] = original;
           }
         }
@@ -9982,7 +9972,6 @@ missingLibrarySymbols.forEach(missingLibrarySymbol)
   'FS_ignorePermissions',
   'FS_filesystems',
   'FS_syncFSRequests',
-  'FS_readFiles',
   'FS_lookupPath',
   'FS_getPath',
   'FS_hashName',
@@ -10123,6 +10112,8 @@ unexportedSymbols.forEach(unexportedRuntimeSymbol);
 
 function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
+  ignoredModuleProp('logReadFiles');
+  ignoredModuleProp('loadSplitModule');
 }
 function setupWebWindowResize(windowPtr) { Module.windowInstance = windowPtr; Module.setWindowSize = function(width, height) { Module.ccall('setWindowSize', null, ['number', 'number', 'number'], [Module.windowInstance, width, height]); }; Module.handleResize = function() { var canvas = document.getElementById('canvas'); if (!canvas) return; var dpr = 1; var width = Math.floor(canvas.clientWidth * dpr); var height = Math.floor(canvas.clientHeight * dpr); canvas.width = width; canvas.height = height; Module.setWindowSize(width, height); }; if (typeof window !== 'undefined') { window.addEventListener('resize', Module.handleResize); Module.handleResize(); } }
 function ImGui_ImplGlfw_EmscriptenOpenURL(url) { url = url ? UTF8ToString(url) : null; if (url) window.open(url, '_blank'); }
@@ -10183,6 +10174,7 @@ var dynCall_viii = makeInvalidEarlyAccess('dynCall_viii');
 var dynCall_viiiiii = makeInvalidEarlyAccess('dynCall_viiiiii');
 var dynCall_iiiiii = makeInvalidEarlyAccess('dynCall_iiiiii');
 var dynCall_iiii = makeInvalidEarlyAccess('dynCall_iiii');
+var dynCall_ff = makeInvalidEarlyAccess('dynCall_ff');
 var dynCall_iiiii = makeInvalidEarlyAccess('dynCall_iiiii');
 var dynCall_iif = makeInvalidEarlyAccess('dynCall_iif');
 var dynCall_viiii = makeInvalidEarlyAccess('dynCall_viiii');
@@ -10272,6 +10264,7 @@ function assignWasmExports(wasmExports) {
   assert(typeof wasmExports['dynCall_viiiiii'] != 'undefined', 'missing Wasm export: dynCall_viiiiii');
   assert(typeof wasmExports['dynCall_iiiiii'] != 'undefined', 'missing Wasm export: dynCall_iiiiii');
   assert(typeof wasmExports['dynCall_iiii'] != 'undefined', 'missing Wasm export: dynCall_iiii');
+  assert(typeof wasmExports['dynCall_ff'] != 'undefined', 'missing Wasm export: dynCall_ff');
   assert(typeof wasmExports['dynCall_iiiii'] != 'undefined', 'missing Wasm export: dynCall_iiiii');
   assert(typeof wasmExports['dynCall_iif'] != 'undefined', 'missing Wasm export: dynCall_iif');
   assert(typeof wasmExports['dynCall_viiii'] != 'undefined', 'missing Wasm export: dynCall_viiii');
@@ -10358,6 +10351,7 @@ function assignWasmExports(wasmExports) {
   dynCall_viiiiii = dynCalls['viiiiii'] = createExportWrapper('dynCall_viiiiii', 7);
   dynCall_iiiiii = dynCalls['iiiiii'] = createExportWrapper('dynCall_iiiiii', 6);
   dynCall_iiii = dynCalls['iiii'] = createExportWrapper('dynCall_iiii', 4);
+  dynCall_ff = dynCalls['ff'] = createExportWrapper('dynCall_ff', 2);
   dynCall_iiiii = dynCalls['iiiii'] = createExportWrapper('dynCall_iiiii', 5);
   dynCall_iif = dynCalls['iif'] = createExportWrapper('dynCall_iif', 3);
   dynCall_viiii = dynCalls['viiii'] = createExportWrapper('dynCall_viiii', 5);
