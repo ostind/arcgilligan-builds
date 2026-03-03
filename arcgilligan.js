@@ -71,7 +71,7 @@ var ENVIRONMENT_IS_SHELL = !ENVIRONMENT_IS_WEB && !ENVIRONMENT_IS_NODE && !ENVIR
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /tmp/tmpi31jloy1.js
+// include: /tmp/tmpau5yz_oa.js
 
   if (!Module['expectedDataFileDownloads']) Module['expectedDataFileDownloads'] = 0;
   Module['expectedDataFileDownloads']++;
@@ -211,25 +211,25 @@ Module['FS_createPath']("/home/runner/work/arcgilligan/arcgilligan/static", "tex
     }
 
     }
-    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.ico", "start": 1227733, "end": 1498131}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.png", "start": 1498131, "end": 1575270}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.rc", "start": 1575270, "end": 1575315}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1575315, "end": 1590431}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1590431, "end": 1713451}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1713451, "end": 1753415}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1753415, "end": 1765059}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1765059, "end": 1765338}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/grid.wgsl", "start": 1765338, "end": 1766670}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1766670, "end": 1768029}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/building.png", "start": 1768029, "end": 1822107}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1822107, "end": 1885214}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/site.jpg", "start": 1885214, "end": 1965307}], "remote_package_size": 1965307});
+    loadPackage({"files": [{"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/DroidSans.ttf", "start": 0, "end": 190044}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Bold.ttf", "start": 190044, "end": 534196}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Italic.ttf", "start": 534196, "end": 880676}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/Inter_18pt-Regular.ttf", "start": 880676, "end": 1223356}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/font/OFL.txt", "start": 1223356, "end": 1227733}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.ico", "start": 1227733, "end": 1498131}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.png", "start": 1498131, "end": 1575270}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/ico/arcgilligan.rc", "start": 1575270, "end": 1575315}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/cube.fbx", "start": 1575315, "end": 1590431}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/girl.fbx", "start": 1590431, "end": 1713451}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/lamp.fbx", "start": 1713451, "end": 1753415}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/mesh/quad.fbx", "start": 1753415, "end": 1765059}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/compute.wgsl", "start": 1765059, "end": 1765338}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/grid.wgsl", "start": 1765338, "end": 1766670}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/shader/wgpu/render.wgsl", "start": 1766670, "end": 1768028}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/building.png", "start": 1768028, "end": 1822106}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/cat.png", "start": 1822106, "end": 1885213}, {"filename": "/home/runner/work/arcgilligan/arcgilligan/static/texture/site.jpg", "start": 1885213, "end": 1965306}], "remote_package_size": 1965306});
 
   })();
 
-// end include: /tmp/tmpi31jloy1.js
-// include: /tmp/tmpme38uddn.js
+// end include: /tmp/tmpau5yz_oa.js
+// include: /tmp/tmpadb0ij8_.js
 
     // All the pre-js content up to here must remain later on, we need to run
     // it.
     if ((typeof ENVIRONMENT_IS_WASM_WORKER != 'undefined' && ENVIRONMENT_IS_WASM_WORKER) || (typeof ENVIRONMENT_IS_PTHREAD != 'undefined' && ENVIRONMENT_IS_PTHREAD) || (typeof ENVIRONMENT_IS_AUDIO_WORKLET != 'undefined' && ENVIRONMENT_IS_AUDIO_WORKLET)) Module['preRun'] = [];
     var necessaryPreJSTasks = Module['preRun'].slice();
-  // end include: /tmp/tmpme38uddn.js
-// include: /tmp/tmpxzusez7j.js
+  // end include: /tmp/tmpadb0ij8_.js
+// include: /tmp/tmpli0pfe9m.js
 
     if (!Module['preRun']) throw 'Module.preRun should exist because file support used it; did a pre-js delete it?';
     necessaryPreJSTasks.forEach((task) => {
       if (Module['preRun'].indexOf(task) < 0) throw 'All preRun tasks that exist before user pre-js code should remain after; did you replace Module or modify Module.preRun?';
     });
-  // end include: /tmp/tmpxzusez7j.js
+  // end include: /tmp/tmpli0pfe9m.js
 
 
 var arguments_ = [];
